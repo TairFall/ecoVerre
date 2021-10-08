@@ -2,14 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
+use App\Repository\UsersRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
- * @ORM\Table(name="`user`")
+ * @ORM\Entity(repositoryClass=UsersRepository::class)
  */
-class User
+class Users
 {
     /**
      * @ORM\Id
@@ -44,7 +43,7 @@ class User
     private $ville;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $codePostal;
 
@@ -59,14 +58,14 @@ class User
     private $password;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="float")
      */
-    private $longitude;
+    private $lon;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="float")
      */
-    private $latitude;
+    private $lat;
 
     /**
      * @ORM\Column(type="json")
@@ -82,7 +81,6 @@ class User
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
-
 
     public function getId(): ?int
     {
@@ -149,12 +147,12 @@ class User
         return $this;
     }
 
-    public function getCodePostal(): ?int
+    public function getCodePostal(): ?string
     {
         return $this->codePostal;
     }
 
-    public function setCodePostal(int $codePostal): self
+    public function setCodePostal(string $codePostal): self
     {
         $this->codePostal = $codePostal;
 
@@ -185,26 +183,26 @@ class User
         return $this;
     }
 
-    public function getLongitude(): ?float
+    public function getLon(): ?float
     {
-        return $this->longitude;
+        return $this->lon;
     }
 
-    public function setLongitude(?float $longitude): self
+    public function setLon(float $lon): self
     {
-        $this->longitude = $longitude;
+        $this->lon = $lon;
 
         return $this;
     }
 
-    public function getLatitude(): ?float
+    public function getLat(): ?float
     {
-        return $this->latitude;
+        return $this->lat;
     }
 
-    public function setLatitude(?float $latitude): self
+    public function setLat(float $lat): self
     {
-        $this->latitude = $latitude;
+        $this->lat = $lat;
 
         return $this;
     }
@@ -223,12 +221,12 @@ class User
 
     public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
@@ -244,5 +242,4 @@ class User
 
         return $this;
     }
-
 }

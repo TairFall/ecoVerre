@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ContactController extends AbstractController
+class AgglomerationController extends AbstractController
 {
-    #[Route('/contact', name: 'contact')]
+    #[Route('/agglomeration', name: 'agglomeration')]
     public function index(): Response
     {
-        return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
+        return $this->render('agglomeration/index.html.twig', [
+            'controller_name' => 'AgglomerationController',
         ]);
     }
 }

@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\ContactRepository;
+use App\Repository\FormContactRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ContactRepository::class)
+ * @ORM\Entity(repositoryClass=FormContactRepository::class)
  */
-class Contact
+class FormContact
 {
     /**
      * @ORM\Id

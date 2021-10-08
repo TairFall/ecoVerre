@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\VilleRepository;
+use App\Repository\AgglomerationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=VilleRepository::class)
+ * @ORM\Entity(repositoryClass=AgglomerationRepository::class)
  */
-class Ville
+class Agglomeration
 {
     /**
      * @ORM\Id

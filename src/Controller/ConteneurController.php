@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ContainerController extends AbstractController
+class ConteneurController extends AbstractController
 {
-    #[Route('/container', name: 'container')]
+    #[Route('/conteneur', name: 'conteneur')]
     public function index(): Response
     {
-        return $this->render('container/index.html.twig', [
-            'controller_name' => 'ContainerController',
+        return $this->render('conteneur/index.html.twig', [
+            'controller_name' => 'ConteneurController',
         ]);
     }
 }

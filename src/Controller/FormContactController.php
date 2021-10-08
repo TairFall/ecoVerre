@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class VilleController extends AbstractController
+class FormContactController extends AbstractController
 {
-    #[Route('/ville', name: 'ville')]
+    #[Route('/form/contact', name: 'form_contact')]
     public function index(): Response
     {
-        return $this->render('ville/index.html.twig', [
-            'controller_name' => 'VilleController',
+        return $this->render('form_contact/index.html.twig', [
+            'controller_name' => 'FormContactController',
         ]);
     }
 }
