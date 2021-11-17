@@ -36,7 +36,7 @@ class ConteneurController extends AbstractController
     #[Route('/api/conteneur', name: 'conteneur')]
     public function index(CallApiService $callApiService): Response
     {
-        dd($callApiService->getParisData());
+        dd($callApiService->getToulouseData());
 
         return $this->render('index.html.twig', [
             'controller_name' => 'ConteneurController',
